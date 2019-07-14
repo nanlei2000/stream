@@ -4,7 +4,7 @@
   "description": "`if err != nil`",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./test/*.ts",
+    "test": "jest ./test/*.ts --verbose",
     "start": "tsc --watch"
   },
   "devDependencies": {

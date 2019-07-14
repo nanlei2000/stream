@@ -35,4 +35,17 @@ describe('Stream', () => {
     const result = stream.map(v => v * 2).getValue()
     expect(result).toStrictEqual([2, 4, 6])
   })
+  test('filter method ', () => {
+    const result = stream.filter(v => v > 2).getValue()
+    expect(result).toStrictEqual([3])
+  })
+
+  test('reduce method ', () => {
+    const result = stream
+      .reduce((prev, cur) => {
+        return prev + cur
+      }, 0)
+      .getReducedValue()
+    expect(result).toStrictEqual(6)
+  })
 })
